@@ -21,29 +21,13 @@ ROS: Kinetics
 0. Inspection of robot
 1. Dis-assemble to remove brashes and speaker.
 2. Driving test
-3. [TX2 Setup](#there_you_go)
+3. [TX2 Setup](#tx2setup)
 4. Install ROS
 5. Control by ROS
 4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS4. Install ROS
-5. Control by ROS
 
 
-<a name="there_you_go"></a>Take me there
+
+<a name="tx2setup"></a>
 ### 3.TX2 Setup
 
