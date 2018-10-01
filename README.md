@@ -24,7 +24,24 @@ ROS: Kinetics
 3. [TX2 Setup](###3.TX2-Setup)
 4. Install ROS
 5. Control by ROS
-
+4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS4. Install ROS
+5. Control by ROS
 
 
 
