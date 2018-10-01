@@ -58,6 +58,7 @@ Enter the new value, or press ENTER for the default
 Is the information correct? [Y/n]
 ```
 Bring the new user into 'sudo' and 'video' group. 
+
 *Caution!* Without adding to 'video' group, new user's desktop will be like [this](https://youtu.be/_vEGhCDQ_rE).
 
 ```bash
