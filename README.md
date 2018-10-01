@@ -1,8 +1,8 @@
 # Neato-ROS
 
-This is a step by step instruction of make the Neato vacuum robot into self-driving platform.
+This is a step by step instruction of making the Neato vacuum robot into self-driving platform using ROS.
 
-## I'm using the following hardware and software setup.
+## Following hardware and software setup has been used.
 
 Robot: [Neato Botvac D4](https://www.neatorobotics.com/robot-vacuum/botvac-connected-series/botvac-d4-connected/) 
 
@@ -22,3 +22,5 @@ ROS: Kinetics
 1. Dis-assemble to remove brashes and speaker.
 2. Driving test
 3. TX2 Setup
+4. Install ROS
+5. Control by ROS
