@@ -69,4 +69,8 @@ usermod -aG video newuser
 Of course, you can ssh into the account from other computer.
 
 
-
+## Reference
+https://devtalk.nvidia.com/default/topic/1030157/desktop-gui-not-loading-properly/
+https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04
+https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart
+https://www.howtogeek.com/50787/add-a-user-to-a-group-or-second-group-on-linux/
