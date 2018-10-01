@@ -45,7 +45,7 @@ In order to make new user for controlling the robot, open the terminal and use '
 ```bash
 sudo adduser newuser
 ```
-It will ask for new user's password. You can ignore the rest of the info (e.g. fullname, address etc.) and press enter.
+It will ask for new user's password. You can ignore the rest of the info (e.g. Fullname, Room number etc.) and press enter.
 
 ```bash
 Changing the user information for username
@@ -57,7 +57,8 @@ Enter the new value, or press ENTER for the default
     Other []:
 Is the information correct? [Y/n]
 ```
-Bring the new user into 'sudo' and 'video' group. (Caution!) Without adding to 'video' group, new user's desktop will be like [this](https://youtu.be/_vEGhCDQ_rE).
+Bring the new user into 'sudo' and 'video' group. 
+*Caution!* Without adding to 'video' group, new user's desktop will be like [this](https://youtu.be/_vEGhCDQ_rE).
 
 ```bash
 usermod -aG sudo newuser
