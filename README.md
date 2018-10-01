@@ -18,16 +18,53 @@ ROS: Kinetics
 
 ## Steps
 
-0. Inspection of robot
-1. Dis-assemble to remove brashes and speaker.
-2. Driving test
+0. [Inspection of the robot](#inspection)
+1. [Dis-assemble to remove brashes and a speaker](#disassembly)
+2. [Driving command test](#drivingtest)
 3. [TX2 Setup](#tx2setup)
 4. Install ROS
-5. Control by ROS
+5. Control robot through ROS node
 4. Install ROS
 
+<a name="inspection"></a>
+### 0.Inspection of the robot
 
+<a name="disassembly"></a>
+### 1.Dis-assemble to remove brashes and a speaker
+
+<a name="drivingtest"></a>
+### 2.Driving command test
 
 <a name="tx2setup"></a>
 ### 3.TX2 Setup
+
+First, boot the TX2 on the development board. It will automatically take you to the desktop of user "nvidia".
+
+In order to make new user for controlling the robot, open the terminal and use 'adduser' commmand.
+
+```bash
+sudo adduser newuser
+```
+It will ask for new user's password. You can ignore the rest of the info (e.g. fullname, address etc.) and press enter.
+
+```bash
+Changing the user information for username
+Enter the new value, or press ENTER for the default
+    Full Name []:
+    Room Number []:
+    Work Phone []:
+    Home Phone []:
+    Other []:
+Is the information correct? [Y/n]
+```
+Bring the new user into 'sudo' and 'video' group. (Caution!) Without adding to 'video' group, new user's desktop will be like [this](https://youtu.be/_vEGhCDQ_rE).
+
+```bash
+usermod -aG sudo newuser
+usermod -aG video newuser
+```
+
+Of course, you can ssh into the account from other computer.
+
+
 
