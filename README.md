@@ -90,7 +90,7 @@ Some people might be stuck on the last line above be shown that the current vers
 
 After ```./getKernelSources.sh``` following screen will come up.
 
-img1
+![img1](/image/kernelconf.png)
 
 This is the Kernel configuration panel. Looks intimidating, right? 
 
@@ -118,7 +118,7 @@ $ ls /dev/tty*
 ```
 And finally, got follow.
 
-img2
+![img2](/image/ACM0.png)
 
 
 <a name="drivingtest"></a>
