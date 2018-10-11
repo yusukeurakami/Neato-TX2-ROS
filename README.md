@@ -16,6 +16,11 @@ OS: Ubuntu 16.04
 ROS: Kinetics
 
 
+Bill of Material
+
+https://docs.google.com/spreadsheets/d/1LVPZXWMjtY5SHHGqkMlHwrtYCdRxLl3Qpumzwb6sIFI/edit?usp=sharing
+
+
 ## Steps
 
 0. [Inspection of the robot](#inspection)
