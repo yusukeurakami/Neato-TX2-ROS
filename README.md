@@ -1,4 +1,4 @@
-# Neato-ROS
+# Neato-TX2-ROS
 
 This is a step by step instruction of making the Neato vacuum robot into self-driving platform using ROS.
 
@@ -70,7 +70,7 @@ Of course, you can ssh into the account from other computer.
 
 Unfortunately, the Kernel Module on NVIDA Jetson TX2 disabled driver USB_ACM, so if even you connect the Neato robot to TX2, you will see nothing new in the /dev directory (It should be /dev/ttyACM0). In order to enable the ACM driver, we have to build the new Kernel Module.
 
-But, don't be afraid. There is a nice tutorial in the internet. You are not only the person doing this.
+But, don't be afraid. There is a nice tutorial in the internet.
 Following video explains how to set the configuration of Kernel and build it.
 
 Build Kernel and ttyACM module - NVIDIA Jetson TX2
@@ -90,7 +90,7 @@ Some people might be stuck on the last line above be shown that the current vers
 
 After ```./getKernelSources.sh``` following screen will come up.
 
-img
+img1
 
 This is the Kernel configuration panel. Looks intimidating, right? 
 
@@ -111,7 +111,12 @@ $ reboot
 
 After rebooting, try ``` $ uname -r ``` and check the version name of the Kernel is changed to the one you named at the Kernel congurator.
 
-Okay, Now check if ttyAMC module is recognized by TX2 correctly. And finally, got follow.
+Okay, Now check if ttyAMC module is recognized by TX2 correctly.
+
+```bash
+$ ls /dev/tty*
+```
+And finally, got follow.
 
 img2
 
