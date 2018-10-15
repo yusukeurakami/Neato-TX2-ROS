@@ -58,7 +58,8 @@ In order to use the Orbitty board instead of the devlopment board that come with
 
 Basic steps are following.
 
-1. Install the latest Jetson using the Nvidia JetPack from [this webpage](https://developer.nvidia.com/embedded/jetpack). Right now (10/14/2018), JetPack 4.1 Early Access is avaliable but this is only for Xavier Dev Kit, so not apply to TX2. I installed JetPack 3.3.
+#### 1. Install the latest Jetson using the Nvidia JetPack from [this webpage](https://developer.nvidia.com/embedded/jetpack). 
+Right now (10/14/2018), JetPack 4.1 Early Access is avaliable but this is only for Xavier Dev Kit, so not apply to TX2. I installed JetPack 3.3.
 
 After you moved the Jetpack, locate the file in the directory you want, and run as follows.
 
@@ -69,19 +70,47 @@ chmod +x JetPack-L4T-XX-linux-x64.run
 And you can see this.
 ![img5](/image/jetson_install1.png)
 
-Check the location you want to install and go next. And you will see the jetPack Components Manafer as follow.
+Check the location you want to install and go next. And you will see the jetPack Components Manager as follow.
 
+    - Select "Host - Ubuntu" and set the Action column to "no action".
+    - Select "Install on Target" and set it to "no action".
+    - Select "Flash OS Image to Target" and set it to "no action"
+
+Press next and wait until the jetson has been installed to the host PC.
 ![img6](/image/jetpackCompManager.png)
 
-If you see nothing in the JetPack Components Manager because of the proxy like picture below, [check this link](https://devtalk.nvidia.com/default/topic/1016678/jetson-tx2/jetpack-3-0-jetsontx2-corporate-proxy/)
+##### *If you see nothing in the JetPack Components Manager because of the proxy like picture below, [check this link](https://devtalk.nvidia.com/default/topic/1016678/jetson-tx2/jetpack-3-0-jetsontx2-corporate-proxy/)
 
 ![img7](/image/JetPackInstallerEmpty.png)
 
-2. 
+#### 2. Install the Connect Tech support package Setup from [this webpage](http://connecttech.com/product/orbitty-carrier-for-nvidia-jetson-tx2-tx1/). 
+I used L4T r28.2X.
+
+Locate the CTI-L4T-V###.tgz package into ``` <JetPack_install_dir>/64_TX2/Linux_for_Tegra_tx2/``` and Extract the BSP and run the installer.
+
+```
+tar -xzf CTI-L4T-V###.tgz
+cd ./CTI-L4T
+sudo ./install.sh
+```
+
+#### 3. Flash the Jetson into TX2
+
+Firstly, connect the Orbitty board with host PC with the micro USB cable. And then, boot the Jetson into recovery mode by holding down the RESET and RECOVERY button and then press the POWER bottun on the Orbitty board. Release the buttons in order of POWER, RESET, RECOVERY button.
+
+Try ```$lssub``` on the host PC and check if you can find the ```Bus 001 Device xxx: ID xxxx:xxxx NVidia Corp.```.
+
+Open a terminal from the <JetPack_install_dir>/64_TX2/Linux_for_Tegra_tx2/ directory:
+
+```$sudo ./flash.sh orbitty mmcblk0p1```
+
+Just wait until it is done and if you got the screen like below, reboot it!
+
+![img8](/image/complete.png)
 
 
-[Reference1](https://github.com/NVIDIA-Jetson/jetson-trashformers/wiki/Jetson%E2%84%A2-Flashing-and-Setup-Guide-for-a-Connect-Tech-Carrier-Board)
-[Reference2](https://youtu.be/9uMvXqhjxaQ)
+[Reference1: Jetson™ Flashing and Setup Guide for a Connect Tech Carrier Board](https://github.com/NVIDIA-Jetson/jetson-trashformers/wiki/Jetson%E2%84%A2-Flashing-and-Setup-Guide-for-a-Connect-Tech-Carrier-Board)
+[Reference2: ](https://youtu.be/9uMvXqhjxaQ)
 
 
 
