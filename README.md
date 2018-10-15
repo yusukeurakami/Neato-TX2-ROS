@@ -25,7 +25,9 @@ https://docs.google.com/spreadsheets/d/1LVPZXWMjtY5SHHGqkMlHwrtYCdRxLl3Qpumzwb6s
 
 0. [Inspection of the robot](#inspection)
 1. [Dis-assemble to remove brashes and a speaker](#disassembly)
-2. [TX2 Setup](#tx2setup)
+2. [TX2 Hardware Setup](#tx2hardsetup)
+3. [TX2 software Setup](#tx2softsetup)
+
 3. [Driving command test](#drivingtest)
 4. Install ROS
 5. Control robot through ROS node
@@ -37,8 +39,54 @@ https://docs.google.com/spreadsheets/d/1LVPZXWMjtY5SHHGqkMlHwrtYCdRxLl3Qpumzwb6s
 <a name="disassembly"></a>
 ### 1.Dis-assemble to remove brashes and a speaker
 
-<a name="tx2setup"></a>
-### 2.TX2 Setup
+<a name="tx2hardsetup"></a>
+### 2.TX2 hardware Setup
+
+Take off the TX2 from the Devlopment board using the torque screw driver and snap plugin to the Orbitty board.
+![img3](/image/TX2Obritty.png)
+
+Orbitty board need 9V-14V power supply. For the first setup, I used the [12V/2A outlet plug which has the terminal from the beginning](http://a.co/d/6whZ0oo).
+![img4](/image/OutletPowerSupply.png)
+
+In order to install the TX2 on the mobile robot, we need to supply the power by the battery with power regulator.
+I will write about that later.
+
+<a name="tx2softsetup"></a>
+### 3.TX2 software Setup
+
+In order to use the Orbitty board instead of the devlopment board that come with TX2, I had to flash the jetson on TX2. For this step, you need not only the TX2 but the host Linux(Ubuntu) computer that has 10GB+ extra capacity to prepare for the software to flash on TX2.
+
+Basic steps are following.
+
+1. Install the latest Jetson using the Nvidia JetPack from [this webpage](https://developer.nvidia.com/embedded/jetpack). Right now (10/14/2018), JetPack 4.1 Early Access is avaliable but this is only for Xavier Dev Kit, so not apply to TX2. I installed JetPack 3.3.
+
+After you moved the Jetpack, locate the file in the directory you want, and run as follows.
+
+```bash
+chmod +x JetPack-L4T-XX-linux-x64.run
+./JetPack-L4T-XX-linux-x64.run
+```
+And you can see this.
+![img5](/image/jetsonInstall1.png)
+
+Check the location you want to install and go next. And you will see the jetPack Components Manafer as follow.
+
+![img6](/image/jetpackCompManager.png)
+
+If you see nothing in the JetPack Components Manager because of the proxy like picture below, [check this link](https://devtalk.nvidia.com/default/topic/1016678/jetson-tx2/jetpack-3-0-jetsontx2-corporate-proxy/)
+
+![img7](/image/JetPackInstallerEmpty.png)
+
+2. 
+
+
+[Reference1](https://github.com/NVIDIA-Jetson/jetson-trashformers/wiki/Jetson%E2%84%A2-Flashing-and-Setup-Guide-for-a-Connect-Tech-Carrier-Board)
+[Reference2](https://youtu.be/9uMvXqhjxaQ)
+
+
+
+
+
 
 First, boot the TX2 on the development board. It will automatically take you to the desktop of user "nvidia".
 
@@ -124,6 +172,9 @@ $ ls /dev/tty*
 And finally, got follow.
 
 ![img2](/image/ACM0.png)
+
+
+
 
 
 <a name="drivingtest"></a>
