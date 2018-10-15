@@ -43,7 +43,7 @@ https://docs.google.com/spreadsheets/d/1LVPZXWMjtY5SHHGqkMlHwrtYCdRxLl3Qpumzwb6s
 ### 2.TX2 hardware Setup
 
 Take off the TX2 from the Devlopment board using the torque screw driver and snap plugin to the Orbitty board.
-![img3](/image/TX2Obritty.jpg)
+![img3](/image/tx2Obritty.jpg)
 
 Orbitty board need 9V-14V power supply. For the first setup, I used the [12V/2A outlet plug which has the terminal from the beginning](http://a.co/d/6whZ0oo).
 ![img4](/image/OutletPowerSupply.jpg)
