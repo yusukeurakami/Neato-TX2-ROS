@@ -43,10 +43,10 @@ https://docs.google.com/spreadsheets/d/1LVPZXWMjtY5SHHGqkMlHwrtYCdRxLl3Qpumzwb6s
 ### 2.TX2 hardware Setup
 
 Take off the TX2 from the Devlopment board using the torque screw driver and snap plugin to the Orbitty board.
-![img3](/image/TX2Obritty.png)
+![img3](/image/TX2Obritty.jpg)
 
 Orbitty board need 9V-14V power supply. For the first setup, I used the [12V/2A outlet plug which has the terminal from the beginning](http://a.co/d/6whZ0oo).
-![img4](/image/OutletPowerSupply.png)
+![img4](/image/OutletPowerSupply.jpg)
 
 In order to install the TX2 on the mobile robot, we need to supply the power by the battery with power regulator.
 I will write about that later.
@@ -67,7 +67,7 @@ chmod +x JetPack-L4T-XX-linux-x64.run
 ./JetPack-L4T-XX-linux-x64.run
 ```
 And you can see this.
-![img5](/image/jetsonInstall1.png)
+![img5](/image/jetson_install1.png)
 
 Check the location you want to install and go next. And you will see the jetPack Components Manafer as follow.
 
