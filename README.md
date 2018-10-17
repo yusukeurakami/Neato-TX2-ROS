@@ -137,6 +137,7 @@ Bring the new user into 'sudo' and 'video' group.
 *Caution!* Without adding to 'video' group, new user's desktop will be like [this](https://youtu.be/_vEGhCDQ_rE).
 
 ```bash
+groupmod -n new_username old_username
 usermod -aG sudo newuser
 usermod -aG video newuser
 usermod -aG dialout newuser
