@@ -15,10 +15,7 @@ OS: Ubuntu 16.04
 
 ROS: Kinetics
 
-
-Bill of Material
-
-https://docs.google.com/spreadsheets/d/1LVPZXWMjtY5SHHGqkMlHwrtYCdRxLl3Qpumzwb6sIFI/edit?usp=sharing
+[Bill of Material](https://docs.google.com/spreadsheets/d/1LVPZXWMjtY5SHHGqkMlHwrtYCdRxLl3Qpumzwb6sIFI/edit?usp=sharing)
 
 
 ## Steps
@@ -151,8 +148,8 @@ Of course, you can ssh into the account from other computer.
 <a name="drivingtest"></a>
 ### 4.Driving command test
 
-Let's control the Neato robot manually through the USB port.
-First, we need the "screen" pkg.
+Let's control the Neato robot manually through the USB port.First, we need the "screen" pkg.
+
 
 ```bash
 $ sudo apt update
@@ -172,13 +169,18 @@ When you got the blank screen, try type ```help```.
 if you see the commands for Neato robot, you are successfully connected. Try follows.
 * The robot will move forward for 50mm (2'') make sure that your wiring has margin.
 
+
 ```bash 
 $ setmotor speed 50 lwheeldist 50 rwheeldist 50
 ```
 
+
 Does it works? Congratulation! Now you can control this robot through TX2.
 
 You can play around with other command that you can see in "help".
+
+You can find the command API manual [here](https://www.neatorobotics.com/lab/linux/).
+
 
 <a name="installROS"></a>
 ### 5.Install ROS
