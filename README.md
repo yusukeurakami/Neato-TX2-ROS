@@ -27,11 +27,9 @@ https://docs.google.com/spreadsheets/d/1LVPZXWMjtY5SHHGqkMlHwrtYCdRxLl3Qpumzwb6s
 1. [Dis-assemble to remove brashes and a speaker](#disassembly)
 2. [TX2 Hardware Setup](#tx2hardsetup)
 3. [TX2 software Setup](#tx2softsetup)
-
-3. [Driving command test](#drivingtest)
-4. Install ROS
-5. Control robot through ROS node
-4. Install ROS
+4. [Driving command test](#drivingtest)
+5. [Install ROS](#installROS)
+6. [Control robot through ROS node](#controlROS)
 
 <a name="inspection"></a>
 ### 0.Inspection of the robot
@@ -110,12 +108,15 @@ Just wait until it is done and if you got the screen like below, reboot it!
 
 
 [Reference1: Jetson™ Flashing and Setup Guide for a Connect Tech Carrier Board](https://github.com/NVIDIA-Jetson/jetson-trashformers/wiki/Jetson%E2%84%A2-Flashing-and-Setup-Guide-for-a-Connect-Tech-Carrier-Board)
-[Reference2: ](https://youtu.be/9uMvXqhjxaQ)
+
+[Reference2: Flashing NVIDIA Jetson TX2 or TX1 Module](https://youtu.be/9uMvXqhjxaQ)
 
 
+#### 4. Make new user account for the robot (Not necessary)
 
+When you reboot, it will automatically take you to the desktop of user "nvidia".
 
-WHen you reboot, it will automatically take you to the desktop of user "nvidia".
+There is two default users for TX2, "Nvidia" and "Ubuntu". You can either change the name of either of the user's name or create a new user for a robot.
 
 In order to make new user for controlling the robot, open the terminal and use 'adduser' commmand.
 
@@ -147,17 +148,40 @@ usermod -aG dialout newuser
 
 Of course, you can ssh into the account from other computer.
 
-
-
-
-
-
-
-
 <a name="drivingtest"></a>
-### 3.Driving command test
+### 4.Driving command test
 
+Let's control the Neato robot manually through the USB port.
+First, we need the "screen" pkg.
+
+```bash
+$ sudo apt update
+$ sudo apt screen
+```
+
+After that we will connect to robot through "screen" command as follow.
+
+```bash
+screen /dev/ttyACM0
+```
 [If your TX2 doesn't recognize the ttyACM0, follow this instruction.](no_ttyACM0.md)
+
+
+When you got the blank screen, try type ```help```.
+
+if you see the commands for Neato robot, you are successfully connected. Try follows.
+* The robot will move forward for 50mm (2'') make sure that your wiring has margin.
+
+```bash 
+$ setmotor speed 50 lwheeldist 50 rwheeldist 50
+```
+
+Does it works? Congratulation! Now you can control this robot through TX2.
+
+You can play around with other command that you can see in "help".
+
+<a name="installROS"></a>
+### 5.Install ROS
 
 
 ## Reference
