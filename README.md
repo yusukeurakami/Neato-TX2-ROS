@@ -115,9 +115,7 @@ Just wait until it is done and if you got the screen like below, reboot it!
 
 
 
-
-
-First, boot the TX2 on the development board. It will automatically take you to the desktop of user "nvidia".
+WHen you reboot, it will automatically take you to the desktop of user "nvidia".
 
 In order to make new user for controlling the robot, open the terminal and use 'adduser' commmand.
 
@@ -158,6 +156,8 @@ Of course, you can ssh into the account from other computer.
 
 <a name="drivingtest"></a>
 ### 3.Driving command test
+
+[If your TX2 doesn't recognize the ttyACM0, follow this instruction.](no_ttyACM0.md)
 
 
 ## Reference
