@@ -186,6 +186,18 @@ You can find the command API manual [here](https://www.neatorobotics.com/lab/lin
 <a name="installROS"></a>
 ### 5.Install ROS
 
+I think most of the people trace [this webpage](http://wiki.ros.org/kinetic/Installation/Ubuntu) to install ROS-Kinetic but this did not work for me.
+
+Instead, I used following git repo by [Jetsonhacks](https://www.jetsonhacks.com/)
+
+[Jetsonhacks: installROSTX2](https://github.com/jetsonhacks/installROSTX2)
+
+```bash
+$ git clone https://github.com/jetsonhacks/installROSTX2
+$ cd installROSTX2
+$ ./installROS.sh -p ros-kinetic-desktop-full
+```
+
 
 ## Reference
 https://devtalk.nvidia.com/default/topic/1030157/desktop-gui-not-loading-properly/
